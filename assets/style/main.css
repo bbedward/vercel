@@ -1,0 +1,69 @@
+body {
+  background-color: hotpink;
+  font-family: "Inter", sans-serif;
+}
+
+/* 3 Column Container CSS */
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* 2 columns (600px and beyond) */
+
+@media only screen and (min-width: 600px) {
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* 3 columns (768px and beyond) */
+
+@media only screen and (min-width: 768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+.container .col {
+  background: gray;
+}
+
+.container .col p {
+  padding: 0.25rem 0.75rem;
+}
+
+/* Header */
+
+h2 {
+  font-size: 1.75em;
+  padding: 0.25rem;
+  color: white;
+}
+
+header.container > .col {
+  padding: 1.5rem 0;
+}
