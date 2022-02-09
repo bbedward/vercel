@@ -138,6 +138,11 @@ h1 {
   color: white;
 }
 
+.icon {
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
 /* search container */
 .search-box {
   position: relative;
