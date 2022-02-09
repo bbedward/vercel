@@ -1,16 +1,35 @@
 body {
-  background-color: hotpink;
+  background-color: black;
+  color: #888;
   font-family: "Inter", sans-serif;
+}
+
+body:before {
+  background: #111;
+  border-top: 1px solid #333;
+  content: "";
+  height: calc(100% - 310px);
+  left: 0;
+  position: absolute;
+  top: 310px;
+  width: 100%;
+  z-index: 0;
 }
 
 /* 3 Column Container CSS */
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0 15px;
   margin: 0 auto;
   max-width: 100%;
   clear: both;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .col,
+.container .col-50 {
+  z-index: 100;
 }
 
 @media (min-width: 768px) {
@@ -31,39 +50,215 @@ body {
   }
 }
 
-/* 2 columns (600px and beyond) */
-
 @media only screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
   .container .col {
     float: left;
-    width: 50%;
+    flex: 50%;
+  }
+  .container .col-50 {
+    float: left;
   }
 }
-
-/* 3 columns (768px and beyond) */
 
 @media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
   .container .col {
-    width: 33.333%;
+    flex: 33.333%;
+  }
+  .container .col-50 {
+    flex: 50%;
   }
 }
 
-.container .col {
-  background: gray;
-}
-
-.container .col p {
+.container .col p,
+.container .col-50 p {
   padding: 0.25rem 0.75rem;
 }
 
 /* Header */
 
+/* Logo */
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid white;
+  padding-top: 0.2rem;
+}
+
+.logo {
+  display: flex;
+  padding-left: 0.25rem;
+}
+
+.logo > .triangle {
+  flex: 1;
+}
+
+.logo > h2 {
+  flex: 200;
+}
+
 h2 {
   font-size: 1.75em;
-  padding: 0.25rem;
+  font-weight: 600;
+  color: white;
+  padding-left: 0.25rem;
+}
+
+header.container > .col,
+.container > .col-50 {
+  padding: 1.5rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  text-align: right;
+  padding-right: 0.25rem;
+}
+
+.nav li {
+  font-size: 0.9em;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav li:first-child {
+  margin-left: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+  color: #888;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.nav a.nav-button {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  color: black;
+  letter-spacing: 0.05em;
+}
+
+.nav a.nav-button:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Middle search section */
+h1 {
+  font-size: 2.75em;
+  font-weight: 600;
   color: white;
 }
 
-header.container > .col {
-  padding: 1.5rem 0;
+.backbtn,
+.subtitle {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.backbtn {
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  margin-top: 30px;
+}
+
+.backbtn a {
+  text-decoration: none;
+  display: block;
+  color: #888;
+}
+
+.backbtn a:hover {
+  color: white;
+}
+
+/* search container */
+.search-box {
+  position: relative;
+  float: right;
+  margin-top: 40px;
+}
+
+.search-box > .icon {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+.search-box > input {
+  padding-left: 40px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #333;
+  background: transparent;
+  border-radius: 5px;
+  color: #888;
+  font-size: 0.9em;
+  width: 300px;
+}
+
+/* Top row */
+
+.p-15 {
+  padding: 15px;
+}
+
+.topBox {
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #000;
+}
+
+.flex-stack {
+  --flex: initial;
+  --direction: column;
+  --align: stretch;
+  --justify: flex-start;
+}
+
+.flex-stack img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.topBox .boxTitle {
+  margin-top: 20px;
+}
+
+.boxTitle {
+  color: #fff;
+  font-weight: 500;
+}
+
+.boxSubtitle {
+  font-size: 0.9em;
+  line-height: 20px;
+}
+
+.otherBox {
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 30px;
 }

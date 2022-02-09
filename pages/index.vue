@@ -1,38 +1,49 @@
 <template>
-  <div>
+  <div class="wrapper">
     <HeaderComponent />
+    <SearchSection />
     <div class="container">
-      <div class="col">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          sequi sint ipsa alias amet. Numquam voluptatum maiores. Ab repellat
-          dolores quo quas quam quasi voluptatem delectus aperiam. Deleniti
-          accusamus dolore!
-        </p>
+      <div class="col p-15">
+        <TopBox />
       </div>
-      <div class="col">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          sequi sint ipsa alias amet. Numquam voluptatum maiores. Ab repellat
-          dolores quo quas quam quasi voluptatem delectus aperiam. Deleniti
-          accusamus dolore!
-        </p>
+      <div class="col p-15">
+        <TopBox />
       </div>
-      <div class="col">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          sequi sint ipsa alias amet. Numquam voluptatum maiores. Ab repellat
-          dolores quo quas quam quasi voluptatem delectus aperiam. Deleniti
-          accusamus dolore!
-        </p>
+      <div class="col p-15">
+        <TopBox />
       </div>
-      <div class="col">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          sequi sint ipsa alias amet. Numquam voluptatum maiores. Ab repellat
-          dolores quo quas quam quasi voluptatem delectus aperiam. Deleniti
-          accusamus dolore!
-        </p>
+    </div>
+    <div class="container">
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+    </div>
+    <div class="container">
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+    </div>
+    <div class="container">
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
+      </div>
+      <div class="col p-15">
+        <OtherBox />
       </div>
     </div>
   </div>
