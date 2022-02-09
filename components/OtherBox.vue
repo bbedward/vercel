@@ -7,7 +7,7 @@
             <font-awesome-icon
               class="icon"
               :icon="['fas', 'keyboard']"
-              style="margin-right: 5px"
+              style="margin-right: 5px; color: green"
             />Next.js
           </p>
         </div>

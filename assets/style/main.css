@@ -4,18 +4,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-body:before {
-  background: #111;
-  border-top: 1px solid #333;
-  content: "";
-  height: calc(100% - 310px);
-  left: 0;
-  position: absolute;
-  top: 310px;
-  width: 100%;
-  z-index: 0;
-}
-
 /* 3 Column Container CSS */
 
 .container {
@@ -32,54 +20,6 @@ body:before {
   z-index: 100;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .container {
-    flex-direction: row;
-  }
-  .container .col {
-    float: left;
-    flex: 50%;
-  }
-  .container .col-50 {
-    float: left;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
-  .container .col {
-    flex: 33.333%;
-  }
-  .container .col-50 {
-    flex: 50%;
-  }
-}
-
-.container .col p,
-.container .col-50 p {
-  padding: 0.25rem 0.75rem;
-}
-
 /* Header */
 
 /* Logo */
@@ -93,9 +33,15 @@ body:before {
   padding-top: 0.2rem;
 }
 
+.logo-flex {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
   display: flex;
-  padding-left: 0.25rem;
 }
 
 .logo > .triangle {
@@ -120,20 +66,14 @@ header.container > .col,
 
 .nav ul {
   list-style: none;
-  text-align: right;
-  padding-right: 0.25rem;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .nav li {
   font-size: 0.9em;
   line-height: 30px;
   height: 30px;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.nav li:first-child {
-  margin-left: 0;
 }
 
 .nav a {
@@ -169,6 +109,12 @@ h1 {
 }
 
 .backbtn,
+.subtitle,
+h1 {
+  padding: 0 20px;
+}
+
+.backbtn,
 .subtitle {
   font-size: 0.9em;
   font-weight: 500;
@@ -195,8 +141,10 @@ h1 {
 /* search container */
 .search-box {
   position: relative;
-  float: right;
+  float: none;
   margin-top: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .search-box > .icon {
@@ -214,7 +162,7 @@ h1 {
   border-radius: 5px;
   color: #888;
   font-size: 0.9em;
-  width: 300px;
+  width: calc(100% - 40px);
 }
 
 /* Top row */
@@ -261,4 +209,104 @@ h1 {
   border: 2px solid #333;
   border-radius: 5px;
   padding: 30px;
+}
+
+/* desktop Query */
+
+@media only screen and (min-width: 650px) {
+  body:before {
+    background: #111;
+    border-top: 1px solid #333;
+    content: "";
+    height: calc(100% - 400px);
+    left: 0;
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    z-index: 0;
+  }
+  .container {
+    flex-direction: row;
+  }
+  .container .col {
+    float: left;
+    flex: 50%;
+  }
+  .container .col-50 {
+    float: left;
+    flex: 50%;
+  }
+
+  /* nav */
+  .nav ul {
+    text-align: right;
+    padding-right: 0.25rem;
+    padding-left: 0;
+  }
+
+  .nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .nav li:first-child {
+    margin-left: 0;
+  }
+
+  .backbtn,
+  .subtitle,
+  h1 {
+    padding: 0;
+  }
+
+  .logo-flex {
+    padding-left: 0.25rem;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .search-box {
+    margin-right: 0;
+    margin-left: 0;
+    float: right;
+  }
+
+  .search-box > input {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .container .col {
+    flex: 33.333%;
+  }
+  .container .col-50 {
+    flex: 50%;
+  }
+}
+
+.container .col p,
+.container .col-50 p {
+  padding: 0.25rem 0.75rem;
 }

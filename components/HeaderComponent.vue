@@ -1,8 +1,10 @@
 <template>
   <header class="container">
     <div class="col-50 logo">
-      <div class="triangle"></div>
-      <h2>Vercel</h2>
+      <div class="logo-flex">
+        <div class="triangle"></div>
+        <h2>Vercel</h2>
+      </div>
     </div>
     <div class="col-50">
       <div class="nav">
